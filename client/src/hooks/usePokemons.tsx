@@ -2,7 +2,7 @@ import axios from "axios";
 import { useCallback, useState } from "react";
 
 enum Defaults {
-  BASE_URL = "http://localhost:3000/poke-service/",
+  BASE_URL = "http://localhost:8001/poke-service",
 }
 
 export const usePokemons = () => {
