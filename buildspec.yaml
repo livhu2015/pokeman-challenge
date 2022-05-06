@@ -12,9 +12,9 @@ phases:
       - docker build -t pokemon-server-ecr-repo ./server/.
 #      - docker build -t pokemon-server-ecr-repo .
 #      - docker tag pokemon-client-ecr-repo:latest $CLIENT_ECR_IMAGE_URL:latest
-#      - docker tag pokemon-server-repo:latest $SERVER_ECR_IMAGE_URL:latest
-      - docker tag pokemon-client-ecr-repo:latest 967411324500.dkr.ecr.eu-west-1.amazonaws.com/pokemon-client-ecr-repo:latest
-      - docker tag pokemon-server-ecr-repo:latest 967411324500.dkr.ecr.eu-west-1.amazonaws.com/pokemon-server-repo:latest
+#      - docker tag pokemon-server-ecr-repo:latest $SERVER_ECR_IMAGE_URL:latest
+#      - docker tag pokemon-client-ecr-repo:latest 967411324500.dkr.ecr.eu-west-1.amazonaws.com/pokemon-client-ecr-repo:latest
+#      - docker tag pokemon-server-ecr-repo:latest 967411324500.dkr.ecr.eu-west-1.amazonaws.com/pokemon-server-repo:latest
       - docker push 967411324500.dkr.ecr.eu-west-1.amazonaws.com/pokemon-client-ecr-repo:latest
       - docker push 967411324500.dkr.ecr.eu-west-1.amazonaws.com/pokemon-server-ecr-repo:latest
 
