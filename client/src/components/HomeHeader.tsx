@@ -3,6 +3,7 @@ enum ClassNames {
   HeaderTitle = "text-4xl font-black p-2 text-primary",
   HeaderText = "text-xl font-thin p-2 text-accent",
 }
+
 export const HomeHeader = () => {
   return (
     <div className={ClassNames.Header}>

@@ -53,6 +53,7 @@ export const InfoTabs = (props: InfoTabsProps) => {
     </div>
   );
 };
+
 interface InfoTabsProps {
   abilities: any;
   items: any;
