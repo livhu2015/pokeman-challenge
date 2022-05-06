@@ -7,10 +7,10 @@ phases:
     commands:
 #      - aws ecr get-login-password | docker login --username AWS --password-stdin $ECR_ENDPOINT
       - aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 967411324500.dkr.ecr.eu-west-1.amazonaws.com
-#      - docker build -t pokemon-client-ecr-repo ./client/.
-      - docker build -t pokemon-client-ecr-repo .
-#      - docker build -t pokemon-server-ecr-repo ./server/.
-      - docker build -t pokemon-server-ecr-repo .
+      - docker build -t pokemon-client-ecr-repo ./client/.
+#      - docker build -t pokemon-client-ecr-repo .
+      - docker build -t pokemon-server-ecr-repo ./server/.
+#      - docker build -t pokemon-server-ecr-repo .
 #      - docker tag pokemon-client-ecr-repo:latest $CLIENT_ECR_IMAGE_URL:latest
 #      - docker tag pokemon-server-repo:latest $SERVER_ECR_IMAGE_URL:latest
       - docker tag pokemon-client-ecr-repo:latest 967411324500.dkr.ecr.eu-west-1.amazonaws.com/pokemon-client-ecr-repo:latest
