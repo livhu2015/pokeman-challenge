@@ -34,11 +34,7 @@ resource "aws_codebuild_project" "my_project" {
     }
 
     environment_variable {
-      name  = "CLIENT_ECR_ENDPOINT"
-      value = "967411324500.dkr.ecr.eu-west-1.amazonaws.com"
-    }
-    environment_variable {
-      name  = "SERVER_ECR_ENDPOINT"
+      name  = "ECR_ENDPOINT"
       value = "967411324500.dkr.ecr.eu-west-1.amazonaws.com"
     }
   }

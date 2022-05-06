@@ -9,7 +9,7 @@ phases:
       - docker build -t pokemon-client-ecr-repo ./client/.
       - docker build -t pokemon-server-ecr-repo ./server/.
       - docker tag pokemon-client-ecr-repo:latest $CLIENT_ECR_IMAGE_URL:latest
-      - docker tag pokemon-server-repo:latest $SERVER_ECR_IMAGE_URL:latest
+      - docker tag pokemon-server-repo:latest $SERVER_ECR_IMAGE_URL:latestx
       - echo $ECR_IMAGE_URL
       - docker push $CLIENT_ECR_IMAGE_URL:latest
       - docker push $SERVER_ECR_IMAGE_URL:latest
