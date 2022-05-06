@@ -3,24 +3,20 @@ phases:
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
+      - echo $ECR_IMAGE_URL
+      - echo $CLIENT_ECR_IMAGE_URL
+      - echo $SERVER_ECR_IMAGE_URL
+
   build:
     commands:
 #      - aws ecr get-login-password | docker login --username AWS --password-stdin $ECR_ENDPOINT
-      - aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 967411324500.dkr.ecr.eu-west-1.amazonaws.com
+      - aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin $ECR_ENDPOINT
       - docker build -t pokemon-client-ecr-repo ./client/.
-#      - docker build -t pokemon-client-ecr-repo .
       - docker build -t pokemon-server-ecr-repo ./server/.
-#      - docker build -t pokemon-server-ecr-repo .
-#      - docker tag pokemon-client-ecr-repo:latest $CLIENT_ECR_IMAGE_URL:latest
-#      - docker tag pokemon-server-ecr-repo:latest $SERVER_ECR_IMAGE_URL:latest
-#      - docker tag pokemon-client-ecr-repo:latest 967411324500.dkr.ecr.eu-west-1.amazonaws.com/pokemon-client-ecr-repo:latest
-#      - docker tag pokemon-server-ecr-repo:latest 967411324500.dkr.ecr.eu-west-1.amazonaws.com/pokemon-server-repo:latest
-      - docker push 967411324500.dkr.ecr.eu-west-1.amazonaws.com/pokemon-client-ecr-repo:latest
-      - docker push 967411324500.dkr.ecr.eu-west-1.amazonaws.com/pokemon-server-ecr-repo:latest
-
-#      - echo $ECR_IMAGE_URL
-#      - docker push $CLIENT_ECR_IMAGE_URL:latest
-#      - docker push $SERVER_ECR_IMAGE_URL:latest
+      - docker tag pokemon-client-ecr-repo:latest $CLIENT_ECR_IMAGE_URL:latest
+      - docker tag pokemon-server-ecr-repo:latest $SERVER_ECR_IMAGE_URL:latest
+      - docker push $CLIENT_ECR_IMAGE_URL:latest
+      - docker push $SERVER_ECR_IMAGE_URL:latest
 
 #  Retrieve an authentication token and authenticate your Docker client to your registry.
 #Use the AWS CLI:

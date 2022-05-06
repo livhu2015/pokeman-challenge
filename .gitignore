@@ -1,0 +1,10 @@
+server/node_modules/*
+client/node_modules/*
+.idea/
+aws_setup/.terraform.lock.hcl
+aws_setup/.terraform/
+aws_setup/terraform.tfstate
+cicd/.terraform.lock.hcl
+cicd/.terraform/
+cicd/terraform.tfstate
+cicd/terraform.tfstate.backup
